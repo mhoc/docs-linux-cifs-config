@@ -11,7 +11,7 @@ non-zero amount of time and retries to track down the proper configuration strin
 sudo pacman -S cifs-utils
 ```
 
-- Append to `/etc/fstab`:
+- Append to `/etc/fstab`. The critical part here is really the `vers`; apparently Synology doesn't support newer versions of CIFS (or maybe my NAS is old, idk).
 
 ```
 //192.168.1.100/share /home/mike/nas/share cifs username=USERNAME,password=PASSWORD,dir_mode=0777,file_mode=0777,vers=2.0 0 0
